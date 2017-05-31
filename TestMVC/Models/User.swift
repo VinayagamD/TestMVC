@@ -61,7 +61,7 @@ class User: BaseObject {
             let response = ResponseModel<User>(data: json)
             success(response)
         }) { (json, error) in
-            fail(json,error)
+            fail(nil ,error)
         }
        
     }
