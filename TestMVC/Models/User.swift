@@ -44,21 +44,21 @@ class User: BaseObject {
     }
 
     public func toLoginDict() -> NSDictionary {
-        let loginDict = NSDictionary()
-        loginDict.setValue("\(mobile!)", forKey: "mobile")
-        loginDict.setValue("\(password!)", forKey: "password")
-        loginDict.setValue("\(deviceKey!)", forKey: "device_key")
-        loginDict.setValue("\(deviceOs!)", forKey: "device_os")
-        loginDict.setValue("\(osVersion!)", forKey: "os_version")
-        loginDict.setValue("\(fcmToken!)", forKey: "FCM_token")
-        loginDict.setValue("\(loginType!)", forKey: "login_type")
+        let loginDict = NSMutableDictionary()
+        loginDict.setValue(mobile, forKey: "mobile")
+        loginDict.setValue(password, forKey: "password")
+        loginDict.setValue(deviceKey, forKey: "device_key")
+        loginDict.setValue(deviceOs, forKey: "device_os")
+        loginDict.setValue(osVersion, forKey: "os_version")
+        loginDict.setValue(fcmToken, forKey: "FCM_token")
+        loginDict.setValue(loginType, forKey: "login_type")
 
         return loginDict
     }
 
     public static func login(user : User, success: @escaping Success, fail: @escaping Fail){
         ApiManager.post(url: Urls.LOGIN, param: user.toLoginDict(), success: { (json) in
-            let response = ResponseModel<User>(data: json)
+            let response = ResponseModel<User>(data: (json as? NSDictionary))
             success(response)
         }) { (json, error) in
             fail(nil ,error)

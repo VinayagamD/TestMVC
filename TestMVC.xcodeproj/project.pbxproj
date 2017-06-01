@@ -15,6 +15,7 @@
 		A4AD72FE84EE1B72D6261E2B /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD740F4DD0AABAC3D33A6C /* ApiManager.swift */; };
 		A4AD7583814691E66A41DA24 /* TestMVCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD79B6314F00817B2AAF3E /* TestMVCUITests.swift */; };
 		A4AD75D43E34BBCF456ADD98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4AD7718A47A5D0B4E2B9C97 /* Main.storyboard */; };
+		A4AD780DF030006BD0F5C2CF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD73077BA46B41420779AB /* Utils.swift */; };
 		A4AD78A4E47EE88288CC1A88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4AD7CAC60EBFF6E396760B6 /* LaunchScreen.storyboard */; };
 		A4AD7ACFC1C539384CE3935E /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD7D3A278C6286C3281BD3 /* Urls.swift */; };
 		A4AD7B8EF9A7E3EB9F66E06A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4AD7F5CA8DE3D89C8CF0E96 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		A4AD719424F21550BC154CD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		A4AD71F4BA0187F5EB16893D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A4AD724E2CB417A7F030738D /* ErrorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		A4AD73077BA46B41420779AB /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		A4AD7353805DD2853F9D5158 /* TestMVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMVCTests.swift; sourceTree = "<group>"; };
 		A4AD736669709BD815A6C15D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4AD740F4DD0AABAC3D33A6C /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		A4AD77853A503D014ABA91FC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A4AD73077BA46B41420779AB /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				A4AD7F1BA6F9C1155EF4FF35 /* BaseObject.swift in Sources */,
 				A4AD712601A5D1286333D93F /* User.swift in Sources */,
 				A4AD7DBAFDBFBDC1182C262D /* ResponseModel.swift in Sources */,
+				A4AD780DF030006BD0F5C2CF /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

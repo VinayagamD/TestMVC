@@ -6,6 +6,6 @@
 import Foundation
 
 struct Urls {
-    private static let BASE = ""
-    public  static let LOGIN = "\(BASE)/"
+    private static let BASE = "http://104.198.164.299"
+    public  static let LOGIN = "\(BASE)/user/login"
 }
