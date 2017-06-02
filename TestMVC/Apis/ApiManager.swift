@@ -10,7 +10,7 @@ class ApiManager {
     typealias Success = (_ json: Any?) -> Void
     typealias Fail = (_ json: Any? , _ error: ErrorModel?) -> Void
 
-    public static func post(url : String, param : NSDictionary, success: @escaping Success, fail: @escaping Fail){
+    public static func post(url : String, param : AnyObject , success: @escaping Success, fail: @escaping Fail){
         let url = URL(string: url)!
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "POST"
@@ -18,14 +18,18 @@ class ApiManager {
 
 
         do {
-            urlRequest.httpBody = try JSONSerialization.data(withJSONObject: param, options: [])
+            let data = try JSONSerialization.data(withJSONObject: param as! [String:Any], options:[])
+            urlRequest.httpBody = data
+            print(String(data: data, encoding: String.Encoding.utf8) as String!)
+        
+        
         } catch {
             // No-op
         }
 
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
-        Alamofire.request(urlRequest).validate(statusCode: 200..<300 ).responseJSON { response in
+        Alamofire.request(urlRequest).validate(contentType: ["application/json"]).responseJSON { response in
             switch response.result{
             case .success(let data) :
 

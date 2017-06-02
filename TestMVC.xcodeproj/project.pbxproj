@@ -19,9 +19,7 @@
 		A4AD78A4E47EE88288CC1A88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4AD7CAC60EBFF6E396760B6 /* LaunchScreen.storyboard */; };
 		A4AD7ACFC1C539384CE3935E /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD7D3A278C6286C3281BD3 /* Urls.swift */; };
 		A4AD7B8EF9A7E3EB9F66E06A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4AD7F5CA8DE3D89C8CF0E96 /* Assets.xcassets */; };
-		A4AD7DBAFDBFBDC1182C262D /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD7E3669C061822CBF6910 /* ResponseModel.swift */; };
 		A4AD7E8F2F6A5F5625C1F621 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD724E2CB417A7F030738D /* ErrorModel.swift */; };
-		A4AD7F1BA6F9C1155EF4FF35 /* BaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AD78C8A8B2314F1C34D1A5 /* BaseObject.swift */; };
 		CAF1D3A8F155740139367F7C /* Pods_TestMVCUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B90D46C8304BA47E96E0D2 /* Pods_TestMVCUITests.framework */; };
 		EBD42C64F5AED05C524C04E6 /* Pods_TestMVC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE17B12C5935002541F521E /* Pods_TestMVC.framework */; };
 /* End PBXBuildFile section */
@@ -63,11 +61,9 @@
 		A4AD7477309549D66A671B68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4AD74DDE34EE9711ADAEDC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		A4AD77945B672098B1156B26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A4AD78C8A8B2314F1C34D1A5 /* BaseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseObject.swift; sourceTree = "<group>"; };
 		A4AD79B6314F00817B2AAF3E /* TestMVCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMVCUITests.swift; sourceTree = "<group>"; };
 		A4AD7D3A278C6286C3281BD3 /* Urls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
 		A4AD7D4F37D75F8F9657B6D2 /* TestMVCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestMVCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4AD7E3669C061822CBF6910 /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		A4AD7F5CA8DE3D89C8CF0E96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4AD7FD18CECF06A9014A5D5 /* TestMVCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestMVCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE17B12C5935002541F521E /* Pods_TestMVC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMVC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,9 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				A4AD724E2CB417A7F030738D /* ErrorModel.swift */,
-				A4AD78C8A8B2314F1C34D1A5 /* BaseObject.swift */,
 				A4AD71F4BA0187F5EB16893D /* User.swift */,
-				A4AD7E3669C061822CBF6910 /* ResponseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -477,9 +471,7 @@
 				A4AD7ACFC1C539384CE3935E /* Urls.swift in Sources */,
 				A4AD72FE84EE1B72D6261E2B /* ApiManager.swift in Sources */,
 				A4AD7E8F2F6A5F5625C1F621 /* ErrorModel.swift in Sources */,
-				A4AD7F1BA6F9C1155EF4FF35 /* BaseObject.swift in Sources */,
 				A4AD712601A5D1286333D93F /* User.swift in Sources */,
-				A4AD7DBAFDBFBDC1182C262D /* ResponseModel.swift in Sources */,
 				A4AD780DF030006BD0F5C2CF /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

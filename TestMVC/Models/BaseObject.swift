@@ -5,14 +5,29 @@
 
 import Foundation
 
-class BaseObject: NSObject {
+class BaseObject<T>  {
+    
+    var message :String?
 
-    public override init() {
-        super.init()
+    
+    public  required init() {
+        
     }
-
-    public convenience init(data : NSDictionary?){
+    
+    public convenience init(data: NSDictionary?) {
         self.init()
+        if let message =  data?["message"]{
+            self.message = message as? String
+        }
+        if let output = data?["output"]{
+            self.output = parseData(user: User.init(), data: output as? NSDictionary)
+        }
+        
+        
     }
+
+    public func parseData<T>
+    
+    
 
 }

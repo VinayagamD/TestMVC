@@ -5,10 +5,10 @@
 
 import Foundation
 
-class User: BaseObject {
+class User:NSObject {
 
-    typealias Success = (_ response: ResponseModel<User>?) -> Void
-    typealias Fail = (_ response: ResponseModel<User>? , _ error: ErrorModel?) -> Void
+    typealias Success = (_ response: User?) -> Void
+    typealias Fail = (_ response: User? , _ error: ErrorModel?) -> Void
 
     var mobile: String?
     var password: String?
@@ -26,20 +26,25 @@ class User: BaseObject {
     var authKey: String?
     var profilePicture: String?
     var profileStatus: String?
+    var message :String?
+    var output : User?
 
 
     public override init() {
         super.init()
     }
 
+
+
     public convenience init(data: NSDictionary?) {
         self.init()
-        if let userId = data?["user_id"] {
-            self.userId = userId as? String
+        if let message =  data?["message"]{
+            self.message = message as? String
         }
-        if let name = data?["name"] {
-            self.name = name as? String
+        if let output = data?["output"]{
+            self.output = parseData(user: User.init(), data: output as? NSDictionary)
         }
+
 
     }
 
@@ -56,9 +61,25 @@ class User: BaseObject {
         return loginDict
     }
 
+
+    private func parseData(user : User ,data: NSDictionary?) -> User{
+        if let userId = data?["user_id"] {
+            user.userId = userId as? String
+        }
+        if let name = data?["name"] {
+            user.name = name as? String
+        }
+
+        return user
+    }
+
+    
+    
+
+
     public static func login(user : User, success: @escaping Success, fail: @escaping Fail){
         ApiManager.post(url: Urls.LOGIN, param: user.toLoginDict(), success: { (json) in
-            let response = ResponseModel<User>(data: (json as? NSDictionary))
+            let response = User(data: (json as? NSDictionary))
             success(response)
         }) { (json, error) in
             fail(nil ,error)

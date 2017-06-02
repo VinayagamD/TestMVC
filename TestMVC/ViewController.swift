@@ -31,7 +31,7 @@ class ViewController: UIViewController {
 
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         let user = Utils.getDeviceUser()
-        user.email = emailTextFeild.text
+        user.mobile = emailTextFeild.text
         user.password = passwordTextField.text
         User.login(user: user, success: { (response) in
             print(response as Any)
